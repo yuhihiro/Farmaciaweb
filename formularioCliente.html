@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro Cliente</title>
+    <link rel="stylesheet" href="css/formularioCliente.css" />
+</head>
+<header>
+    <h1>Cadastro de Cliente</h1>
+    <p>Obrigado(a) por nos ajudar a melhorar nossos serviços.</p>
+</header>
+
+<body>
+    <div class="main">
+        <form class="from">
+            <div class="from-grupo">
+                <label for="nome">Nome</label>
+                <input type="text" nome="nomeCliente" placeholder="Digite seu nome:" required />
+            </div>
+            <div class="from-grupo">
+                <label for="email">CPF</label>
+                <input type="text" nome="cpfCliente" placeholder="Digite seu CPF:" required />
+            </div>
+            <div class="from-grupo">
+                <label for="assunto">CEP</label>
+                <input type="text" nome="cepCliente" placeholder="Digite seu CEP:" required />
+            </div>
+            <div class="from-grupo">
+                <label for="mensagem">Endereço</label>
+                <input type="text" nome="ederecoCliente" placeholder="Digite sua Endereço:" required />
+            </div>
+
+            <div class="from-grupo">
+                <button type="submit" onclick="enviar()">Enviar</button>
+            </div>
+            <footer>
+                <p>Drogaria<strong>12</strong> - 2022</p>
+            </footer>
+        </form>
+    </div>
+    <script src="script/index.js"></script>
+</body>
+
+</html>

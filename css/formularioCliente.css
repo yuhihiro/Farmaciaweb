@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 100%;
+  max-height: 100%;
+
+  background: #321321;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header {
+  color: white;
+  text-align: center;
+  margin: 40px;
+  font-size: 1.2rem;
+}
+
+header > h1 {
+  margin-bottom: 10px;
+}
+
+input,
+select {
+  font-size: inherit;
+}
+
+.main {
+  max-width: 600px;
+  max-height: 100%;
+  background: #ffffffd9;
+  margin: 0px auto 40px auto;
+  border-radius: 5px;
+}
+
+.from {
+  padding: 30px;
+}
+
+.from label,
+.from p {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+
+.from-grupo input,
+.from select {
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  margin-bottom: 18px;
+}
+
+.form select {
+  cursor: pointer;
+}
+
+.form-radio-checkbox {
+  margin-bottom: 15px;
+}
+
+form .form-radio-checkbox {
+  display: grid;
+}
+
+.form-radio-checkbox input {
+  margin-right: 10px;
+}
+
+.form-radio-checkbox label {
+  line-height: 2rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.form-radio-checkbox label:first-child {
+  margin-bottom: 10px;
+}
+
+.input-radio {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.input-checkbox {
+  display: inline-block;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  max-width: 100%;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #0e939f;
+  transition: 0.2s ease-out;
+}
+
+button {
+  width: 100%;
+  height: 50px;
+
+  margin: 25px auto;
+  border-radius: 3px;
+  border: none;
+  background-color: #213256;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0px 10px 40px #201b2c;
+}
+
+script {
+  font-size: 5vw;
+}
