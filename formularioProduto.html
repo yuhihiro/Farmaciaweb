@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8" />
@@ -15,25 +15,25 @@
 
 <body>
     <div class="main">
-        <form class="from">
+        <form action="inserirProduto.php" method="POST" class="from">
             <div class="from-grupo">
-                <label for="nome">Nome Produto</label>
-                <input type="text" nome="nomeProduto" placeholder="Informe o Produto:" required />
+                <label>Nome Produto</label>
+                <input type="text" name="nomeProduto" placeholder="Informe o Produto:" required />
             </div>
             <div class="from-grupo">
-                <label for="email">Marca do Produto</label>
-                <input type="text" nome="marcaProduto" placeholder="Informe a Marca:" required />
+                <label>Marca do Produto</label>
+                <input type="text" name="marcaProduto" placeholder="Informe a Marca:" required />
             </div>
             <div class="from-grupo">
-                <label for="assunto">Valor do Produto</label>
-                <input type="number" nome="valorProduto" placeholder="Informe o valor do Produto:" required />
+                <label>Valor do Produto</label>
+                <input type="number" name="valorProduto" placeholder="Informe o valor do Produto:" required />
             </div>
             <div class="from-grupo">
-                <label for="mensagem">Quantidade</label>
-                <input type="number" nome="quantidadeProduto" placeholder="Informe Quantidade do Produto:" required />
+                <label>Quantidade</label>
+                <input type="number" name="quantidadeProduto" placeholder="Informe Quantidade do Produto:" required />
             </div>
 
-            <div class="from-grupo">
+            <div class="button">
                 <button type="submit">Cadastrar</button>
             </div>
             <footer>

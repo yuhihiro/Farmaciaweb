@@ -9,7 +9,7 @@ $cepCliente                = $_POST['cepCliente'];
 $ederecoCliente            = $_POST['ederecoCliente'];
 $telefoneCliente           = $_POST['telefoneCliente'];
 
-$sql = "UPDATE `cliente` SET `nomeCliente`= '$nomeCliente', `cpfCliente` = '$cpfCliente', `cepCliente` ='$cepCliente', `enderecoCliente` = '$enderecoCliente', `telefonecliente` = '$telefoneClinete' WHERE idCliente = $id";
+$sql = "UPDATE `cliente` SET `nomeCliente`= '$nomeCliente', `cpfCliente` = $cpfCliente, `cepCliente` =$cepCliente, `enderecoCliente` = '$enderecoCliente', `telefonecliente` = $telefoneClinete WHERE idCliente = $id";
 
 $atualizar = mysqli_query($conexao,$sql);
 

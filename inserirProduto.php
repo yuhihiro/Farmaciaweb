@@ -7,7 +7,7 @@ $marcaProduto           = $_POST['marcaProduto'];
 $valorProduto           = $_POST['valorProduto'];
 $quantidadeProduto      = $_POST['quantidadeProduto'];
 
-$sql = "INSERT INTO `produto`(`nomeProduto`, `marcaProduto`, `valorProduto`, `quantidadeProduto`)  VALUES ($nomeProduto,'$marcaProduto',$valorProduto,'$quantidadeProduto')";
+$sql = "INSERT INTO `produto`(`nomeProduto`, `marcaProduto`, `valorProduto`, `quantidadeProduto`)  VALUES ('$nomeProduto','$marcaProduto',$valorProduto,$quantidadeProduto)";
 
 $inserir = mysqli_query($conexao, $sql);
 

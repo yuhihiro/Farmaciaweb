@@ -2,6 +2,7 @@ const modal = document.querySelector('.modal-container')
 
 
 
+
 function openModal(edit = false, index = 0) {
     modal.classList.add('active')
   
@@ -11,4 +12,5 @@ function openModal(edit = false, index = 0) {
       }
     }
   }
+
   

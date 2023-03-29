@@ -10,7 +10,7 @@ $telefoneCliente           = $_POST['telefoneCliente'];
 
 
 
-$sql = "INSERT INTO `cliente`(`nomeCliente`, `cpfCliente`, `cepCliente`, `ederecoCliente`, `telefoneCliente`)  VALUES ($nomeCliente,'$cpfCliente','$cepCliente','$ederecoCliente', '$telefoneCliente')";
+$sql = "INSERT INTO `cliente`(`nomeCliente`, `cpfCliente`, `cepCliente`, `ederecoCliente`, `telefoneCliente`)  VALUES ('$nomeCliente',$cpfCliente,$cepCliente,'$ederecoCliente', $telefoneCliente)";
 
 $inserir = mysqli_query($conexao, $sql);
 

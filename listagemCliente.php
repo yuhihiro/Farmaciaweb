@@ -49,8 +49,8 @@
                         <td><?php echo $cpfCliente ?></td>
                         <td><?php echo $ederecoClinte ?></td>
                         <td><?php echo $telefoneCliente ?></td>
-                        <td><a class="bx bx-edit-alt box-icon" style="text-decoration: none;" href="atualizarCliente.php?id=<?php echo $idClinte ?>" role="button" onclick="openModal()" id="new"></a>
-                            <a class="bx bxs-trash box-icon" href="deletarCliente.php?id=<?php echo $idClinte?>" role="button" id="new"></a>
+                        <td><a class="bx bx-edit-alt box-icon" style="text-decoration: none;" role="button" onclick="openModal()" id="new"></a>
+                            <a class="bx bxs-trash box-icon" href="deletarCliente.php?id=<?php echo $idClinte ?>" role="button" id="new"></a>
                         </td>
                     </tr>
                 <?php } ?>
@@ -58,27 +58,46 @@
         </div>
         <div class="modal-container">
             <div class="modal">
-                <form>
-                    <label for="m-nome">Nome Cliente</label>
-                    <input id="m-nome" nome="nomeCliente" type="text" required />
+                <form action="editarCliente.php?id<?php echo $idProduto ?>">
+                <form action="atualizarCliente.php" method="POST">
 
-                    <label for="m-nome">CPF</label>
-                    <input id="m-função" nome="cpfCliente" type="number" required />
+                <?php
+                $sql = "SELECT * FROM `produto` WHERE idProduto = $id";
 
-                    <label for="m-nome">CEP</label>
-                    <input id="m-função" nome="cepCliente" type="number" required />
+                $busca = mysqli_query($conexao, $sql);
 
-                    <label for="m-nome">Endereço</label>
-                    <input id="m-função" nome="enderecoCliente" type="text" required />
+                while ($array = mysqli_fetch_array($busca)) {
+                    $idClinte               = $array['idCliente'];
+                    $nomeCliente            = $array['nomeCliente'];
+                    $cpfCliente             = $array['cpfCliente'];
+                    $cepCliente             = $array['cepCliente'];
+                    $ederecoClinte          = $array['ederecoCliente'];
+                    $telefoneCliente        = $array['telefoneCliente'];
+                ?>
 
-                    <label for="m-nome">Telefone</label>
-                    <input id="m-função" nome="telefoneCliente" type="number" required />
+
+                    <label>Nome Cliente</label>
+                    <input name="nomeCliente" type="text" value="<?php echo $nomeCliente ?>" required />
+
+                    <label>CPF</label>
+                    <input name="cpfCliente" type="number" value="<?php echo $cpfCliente ?>" required />
+
+                    <label>CEP</label>
+                    <input name="cepCliente" type="number" value="<?php echo $cepCliente ?>" required />
+
+                    <label>Endereço</label>
+                    <input name="enderecoCliente" type="text" value="<?php echo $ederecoClinte ?>" required />
+
+                    <label>Telefone</label>
+                    <input name="telefoneCliente" type="number" value="<?php echo $telefoneCliente ?>" required />
 
                     <button>Editar</button>
-
+                </form>
                 </form>
             </div>
         </div>
+        
+        <?php } ?>
     </div>
     <script src="js/script.js"></script>
 </body>

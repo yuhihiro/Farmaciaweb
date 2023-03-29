@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8" />
@@ -15,33 +15,37 @@
 
 <body>
     <div class="main">
-        <form class="from">
+        <form action="inserirCliente.php" method="POST" class="from">
             <div class="from-grupo">
-                <label for="nome">Nome</label>
-                <input type="text" nome="nomeCliente" placeholder="Digite seu nome:" required />
+                <label>Nome</label>
+                <input type="text" name="nomeCliente" placeholder="Digite seu nome:" required />
             </div>
             <div class="from-grupo">
-                <label for="email">CPF</label>
-                <input type="text" nome="cpfCliente" placeholder="Digite seu CPF:" required />
+                <label>CPF</label>
+                <input type="number" name="cpfCliente" placeholder="Digite seu CPF:" required />
             </div>
             <div class="from-grupo">
-                <label for="assunto">CEP</label>
-                <input type="text" nome="cepCliente" placeholder="Digite seu CEP:" required />
+                <label>CEP</label>
+                <input type="number" name="cepCliente" placeholder="Digite seu CEP:" required />
             </div>
             <div class="from-grupo">
-                <label for="mensagem">Endereço</label>
-                <input type="text" nome="ederecoCliente" placeholder="Digite sua Endereço:" required />
+                <label>Endereço</label>
+                <input type="text" name="ederecoCliente" placeholder="Digite sua Endereço:" required />
             </div>
 
             <div class="from-grupo">
-                <button type="submit" onclick="enviar()">Enviar</button>
+                <label>Telefone</label>
+                <input type="number" name="telefoneCliente" placeholder="Digite sua Cliente:" required />
+            </div>
+
+            <div class="button">
+                <button type="submit">Cadastrar</button>
             </div>
             <footer>
                 <p>Drogaria<strong>12</strong> - 2022</p>
             </footer>
         </form>
     </div>
-    <script src="script/index.js"></script>
 </body>
 
 </html>

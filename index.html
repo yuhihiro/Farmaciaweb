@@ -15,10 +15,8 @@
 </head>
 
 <body>
-
-
-
     <header>
+
         <div class="content">
             <nav>
                 <p class="brand">Farmacia<strong>12</strong></p>
@@ -29,7 +27,7 @@
                     <li><a href="formularioCliente.html">Cadastro Cliente</a></li>
                     <li><a href="listagemCliente.php">Listagem Clientes</a></li>
                     <li><a href="listagemProduto.php">Listagem Produto</a></li>
-                    <button>login</button>
+                    <button onclick="openModal()" id="new">Login</button>
 
                 </ul>
             </nav>
@@ -46,6 +44,29 @@
             </div>
         </div>
     </header>
+
+    <div class="modal-container">
+        <div class="modal">
+            <form>
+
+                <h1>Login</h1>
+                <br>
+                <br>
+                <br>
+                <label>Email</label>
+                <input type="text">
+
+                <label>Senha</label>
+                <input type="password">
+                <br>
+                <br>
+                <br>
+                <button>Entrar</button>
+                <button onclick="openModal()" id="new">Register</button>
+
+            </form>
+        </div>    
+    </div>
 
     <section class="catalog" id="catalog">
         <br>
@@ -274,7 +295,7 @@
             <p>Farmacia<strong>12 </strong> - 2022</p>
         </div>
     </footer>
-
+<script src="js/script.js"></script>
 </body>
 
 </html>

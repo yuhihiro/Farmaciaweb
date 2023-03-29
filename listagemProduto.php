@@ -56,19 +56,19 @@
             </table>
         </div>
         <div class="modal-container">
-            <div class="modal" src="editarProduto.php?id=<?php echo $idProduto ?>>
+            <div class="modal">
                 <form>
-                    <label for="m-nome">Nome Produto</label>
-                    <input id="m-nome" nome="nomeProduto" type="text" value = "<?php  echo  $nomeProduto  ?>​​"  required />
+                    <label>Nome Produto</label>
+                    <input name="nomeProduto" type="text" value = "<?php  echo  $nomeProduto  ?>​​"  required />
 
-                    <label for="m-nome">Marca Produto</label>
-                    <input id="m-função" nome="marcaProduto" type="text" value = "<?php  echo  $marcaProduto  ?>​​" required />
+                    <label>Marca Produto</label>
+                    <input  name="marcaProduto" type="text" value = "<?php  echo  $marcaProduto  ?>​​" required />
 
-                    <label for="m-nome">Valor</label>
-                    <input id="m-função" nome="valorProduto" type="number" value = "<?php  echo  $valorProduto  ?>​​" required />
-
-                    <label for="m-nome">Quantidade</label>
-                    <input id="m-função" nome="quantidadeProduto" type="number" value = "<?php  echo  $quantidadeProduto  ?>​​" required />
+                    <label>Valor</label>
+                    <input  name="valorProduto" type="number" value = "<?php  echo  $valorProduto  ?>​​" required />
+                    
+                    <label>Quantidade</label>
+                    <input  name="quantidadeProduto" type="number" value = "<?php  echo  $quantidadeProduto  ?>​​" required />
 
                     <button type="submit">Editar</button>
 
