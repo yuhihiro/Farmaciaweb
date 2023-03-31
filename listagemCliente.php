@@ -13,13 +13,13 @@
 <body>
     <div class="container">
         <div class="header">
-            <span>Cadastro Produto</span>
+            <span>Listagem Cliente</span>
+            <button id="new"><a href="formularioCliente.html" id="new">Incluir</a></button>
         </div>
         <div class="divTable">
             <table>
                 <thead>
                     <tr>
-                        <th scope="col">Cod</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Cpf</th>
                         <th scope="col">Cep</th>
@@ -30,12 +30,13 @@
                 </thead>
                 <?php
                 include 'conexao.php';
+
                 $sql = "SELECT * FROM `cliente`";
-                $busca = mysqli_query($conexao, $sql);
+                $buscar = mysqli_query($conexao, $sql);
 
-                while ($array = mysqli_fetch_array($busca)) {
+                while ($array = mysqli_fetch_array($buscar)) {
 
-                    $idClinte               = $array['idCliente'];
+                    $idCliente               = $array['idCliente'];
                     $nomeCliente            = $array['nomeCliente'];
                     $cpfCliente             = $array['cpfCliente'];
                     $cepCliente             = $array['cepCliente'];
@@ -43,63 +44,20 @@
                     $telefoneCliente        = $array['telefoneCliente'];
                 ?>
                     <tr>
-                        <td><?php echo $idClinte ?></td>
                         <td><?php echo $nomeCliente ?></td>
                         <td><?php echo $cepCliente ?></td>
                         <td><?php echo $cpfCliente ?></td>
                         <td><?php echo $ederecoClinte ?></td>
                         <td><?php echo $telefoneCliente ?></td>
-                        <td><a class="bx bx-edit-alt box-icon" style="text-decoration: none;" role="button" onclick="openModal()" id="new"></a>
-                            <a class="bx bxs-trash box-icon" href="deletarCliente.php?id=<?php echo $idClinte ?>" role="button" id="new"></a>
+                        <td><a class="bx bx-edit-alt box-icon" style="text-decoration: none;" href="editarCliente.php?id=<?php echo $idCliente ?>" role="button" id="new"></a>
+                            <a class="bx bxs-trash box-icon" href="deletarCliente.php?id=<?php echo $idCliente ?>" role="button" id="new"></a>
                         </td>
                     </tr>
                 <?php } ?>
             </table>
         </div>
-        <div class="modal-container">
-            <div class="modal">
-                <form action="editarCliente.php?id<?php echo $idProduto ?>">
-                <form action="atualizarCliente.php" method="POST">
-
-                <?php
-                $sql = "SELECT * FROM `produto` WHERE idProduto = $id";
-
-                $busca = mysqli_query($conexao, $sql);
-
-                while ($array = mysqli_fetch_array($busca)) {
-                    $idClinte               = $array['idCliente'];
-                    $nomeCliente            = $array['nomeCliente'];
-                    $cpfCliente             = $array['cpfCliente'];
-                    $cepCliente             = $array['cepCliente'];
-                    $ederecoClinte          = $array['ederecoCliente'];
-                    $telefoneCliente        = $array['telefoneCliente'];
-                ?>
-
-
-                    <label>Nome Cliente</label>
-                    <input name="nomeCliente" type="text" value="<?php echo $nomeCliente ?>" required />
-
-                    <label>CPF</label>
-                    <input name="cpfCliente" type="number" value="<?php echo $cpfCliente ?>" required />
-
-                    <label>CEP</label>
-                    <input name="cepCliente" type="number" value="<?php echo $cepCliente ?>" required />
-
-                    <label>Endereço</label>
-                    <input name="enderecoCliente" type="text" value="<?php echo $ederecoClinte ?>" required />
-
-                    <label>Telefone</label>
-                    <input name="telefoneCliente" type="number" value="<?php echo $telefoneCliente ?>" required />
-
-                    <button>Editar</button>
-                </form>
-                </form>
-            </div>
-        </div>
-        
-        <?php } ?>
     </div>
     <script src="js/script.js"></script>
 </body>
 
-</html>
+</html> 

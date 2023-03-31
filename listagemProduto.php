@@ -32,9 +32,9 @@
                 <?php
                 include 'conexao.php';
                 $sql = "SELECT * FROM `produto`";
-                $busca = mysqli_query($conexao, $sql);
+                $buscar = mysqli_query($conexao, $sql);
 
-                while ($array = mysqli_fetch_array($busca)) {
+                while ($array = mysqli_fetch_array($buscar)) {
 
                     $idProduto = $array['idProduto'];
                     $nomeProduto  = $array['nomeProduto'];
@@ -48,34 +48,13 @@
                         <td><?php echo $marcaProduto ?></td>
                         <td><?php echo $valorProduto ?></td>
                         <td><?php echo $quantidadeProduto ?></td>
-                        <td><a class="bx bx-edit-alt box-icon" role="button" style="text-decoration: none;" onclick="openModal()" id="new"></a>
+                        <td><a class="bx bx-edit-alt box-icon" role="button" href="editarProduto.php?id=<?php echo $idProduto ?>" style="text-decoration: none;" id="new"></a>
                             <a class="bx bxs-trash box-icon" href="deletarProduto.php?id=<?php echo $idProduto ?>" role="button" id="new"></a>
                         </td>
                     </tr>
                 <?php } ?>
             </table>
         </div>
-        <div class="modal-container">
-            <div class="modal">
-                <form>
-                    <label>Nome Produto</label>
-                    <input name="nomeProduto" type="text" value = "<?php  echo  $nomeProduto  ?>​​"  required />
-
-                    <label>Marca Produto</label>
-                    <input  name="marcaProduto" type="text" value = "<?php  echo  $marcaProduto  ?>​​" required />
-
-                    <label>Valor</label>
-                    <input  name="valorProduto" type="number" value = "<?php  echo  $valorProduto  ?>​​" required />
-                    
-                    <label>Quantidade</label>
-                    <input  name="quantidadeProduto" type="number" value = "<?php  echo  $quantidadeProduto  ?>​​" required />
-
-                    <button type="submit">Editar</button>
-
-                </form>
-            </div>
-        </div>
-    </div>
     <script src="js/script.js"></script>
 </body>
 
